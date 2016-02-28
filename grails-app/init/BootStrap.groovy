@@ -1,5 +1,6 @@
-import grails.angular.jwt.auth.*
-import grails.angular.jwt.Book
+import grangular.Book
+import grangular.auth.*
+
 
 class BootStrap {
 

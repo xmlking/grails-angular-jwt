@@ -1,7 +1,9 @@
+
+
 // Added by the Spring Security Core plugin:
-grails.plugin.springsecurity.userLookup.userDomainClassName = 'grails.angular.jwt.auth.User'
-grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'grails.angular.jwt.auth.UserRole'
-grails.plugin.springsecurity.authority.className = 'grails.angular.jwt.auth.Role'
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'grangular.auth.User'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'grangular.auth.UserRole'
+grails.plugin.springsecurity.authority.className = 'grangular.auth.Role'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	[pattern: '/',               access: ['permitAll']],
 	[pattern: '/error',          access: ['permitAll']],

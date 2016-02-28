@@ -21,7 +21,7 @@
     </script>
 </head>
 
-<body ng-app="grails.angular.jwt" ng-controller="IndexController as vm">
+<body ng-app="grangular" ng-controller="IndexController as vm">
 
     <div class="navbar navbar-default navbar-static-top" role="navigation">
         <div class="container">
@@ -107,6 +107,6 @@
         <g:message code="spinner.alt" default="Loading&hellip;"/>
     </div>
 
-    <asset:javascript src="/grails/angular/jwt/grails.angular.jwt.js" />
+    <asset:javascript src="/grangular/grangular.js" />
 </body>
 </html>

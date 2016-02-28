@@ -16,7 +16,6 @@ dataSource:
 environments:
     development:
         dataSource:
-#            logSql: true
             dbCreate: create-drop
             url: jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
     test:
@@ -51,7 +50,7 @@ environments:
 grails:
     profile: angular
     codegen:
-        defaultPackage: grails.angular.jwt
+        defaultPackage: grangular
     spring:
         transactionManagement:
             proxies: false
