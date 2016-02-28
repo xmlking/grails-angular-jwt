@@ -1,6 +1,6 @@
-describe("grails.angular.jwt.books module", function() {
+describe("grangular.books module", function() {
 
-    beforeEach(angular.mock.module("grails.angular.jwt.books", function() {
+    beforeEach(angular.mock.module("grangular.books", function() {
     }));
 
     describe("run", function() {

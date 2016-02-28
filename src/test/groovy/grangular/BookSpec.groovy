@@ -1,4 +1,4 @@
-package grails.angular.jwt
+package grangular
 
 import grails.test.mixin.TestFor
 import spock.lang.Specification

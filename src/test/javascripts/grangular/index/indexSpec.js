@@ -1,5 +1,5 @@
-describe("grails.angular.jwt.index", function() {
-    beforeEach(angular.mock.module('grails.angular.jwt.index', function($provide) {
+describe("grangular.index", function() {
+    beforeEach(angular.mock.module('grangular.index', function($provide) {
         $provide.constant('contextPath', '/GrailsApp');
     }));
 

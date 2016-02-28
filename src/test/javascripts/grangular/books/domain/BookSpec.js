@@ -1,7 +1,7 @@
-describe("grails.angular.jwt module", function() {
+describe("grangular.books module", function() {
     var $httpBackend;
 
-    beforeEach(angular.mock.module("grails.angular.jwt", function() {
+    beforeEach(angular.mock.module("grangular.books", function() {
     }));
 
     beforeEach(angular.mock.inject(function(_$httpBackend_) {
