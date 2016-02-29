@@ -1,20 +1,16 @@
-
 //= wrapped
 
 angular.module("grangular.books")
     .config(function($stateProvider, $urlRouterProvider) {
-    //
-    // For any unmatched url, redirect to /books
-    $urlRouterProvider.otherwise("/books");
-    //
-    // Now set up the states
+
     $stateProvider
         .state('books', {
             url: "/books",
-            templateUrl: "/grangular/books/list.html",
+            requiresLogin: true,
             controller: "BookListController as ctrl",
+            templateUrl: "/grangular/books/list.html",
             resolve: {
-                bookList: function(BookService) {
+                books: function(BookService) {
                     return BookService.list();
                 }
             }

@@ -19,5 +19,6 @@ gradle-app.setting
 .asscache
 node_modules
 bower_components
+bower.json
 grails-app/assets/bower
 NOTES.md

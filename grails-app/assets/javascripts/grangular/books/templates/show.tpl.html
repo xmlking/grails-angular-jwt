@@ -1,0 +1,23 @@
+<div class="clearfix">
+    <h2 class="pull-left">Show Book</h2>
+    <div class="pull-right">
+        <div class="form-actions">
+            <button crud-button="edit" item="ctrl.book"></button>
+            <button crud-button="delete" item="ctrl.book" ></button>
+        </div>
+    </div>
+</div>
+
+<uib-tabset active="activeJustified" justified="true">
+    <uib-tab heading="General">
+        <br/>
+        <table class="table table-bordered table-striped">
+            <tr label="title" value="ctrl.book.title"></tr>
+            <tr label="ISBN" value="ctrl.book.ISBN"></tr>
+            <tr label="Price" value="ctrl.book.price"></tr>
+            <tr label="Release Date" value="ctrl.book.releaseDate | date: 'MMM d, yyyy'"></tr>
+        </table>
+    </uib-tab>
+    <uib-tab heading="two">
+    </uib-tab>
+</uib-tabset>

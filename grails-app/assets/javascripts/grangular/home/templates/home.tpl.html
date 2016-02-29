@@ -1,0 +1,17 @@
+<div class="home">
+    <div class="jumbotron">
+        <h1>Welcome {{ ctrl.username || 'to Grails'}}</h1>
+        <p>
+            Congratulations, you have successfully started your first Grails application! At the moment
+            this is the default page, feel free to modify it to either redirect to a controller or display
+            whatever content you may choose.
+        </p>
+        <h2 ng-show="ctrl.jwt">Your JWT is:</h2>
+        <pre ng-show="ctrl.jwt" class="jwt"><code>{{ctrl.jwt}}</code></pre>
+        <h2 ng-show="ctrl.jwt"> JWT decoded:</h2>
+        <pre ng-show="ctrl.jwt" class="jwt"><code>{{ctrl.decodedJwt | json}}</code></pre>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,63 @@
+<div  class="container">
+
+    <div flash-message ></div>
+
+    <div class="clearfix">
+        <h2 class="pull-left">Book List</h2>
+        <div class="pull-right"><button crud-button="create"></button></div>
+    </div>
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-filter"></i> Filter List</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <form class="form">
+                    <div class="form-group col-md-3">
+                        <label for="filter.title">Title</label>
+                        <input type="text" class='form-control' ng-model="ctrl.seatchParams.filter.title" ng-model-options="{ debounce: 300 }"  />
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="filter.ISBN">ISBN</label>
+                        <input type="text" class='form-control' ng-model="ctrl.seatchParams.filter.ISBN" ng-model-options="{ debounce: 300 }"  />
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="filter.price">Price</label>
+                        <input class="form-control" ng-model="ctrl.seatchParams.filter.price"  ng-model-options="{ debounce: 300 }"  >
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="filter.releaseDate">Release Date</label>
+                        <input class="form-control" ng-model="ctrl.seatchParams.filter.releaseDate"  ng-model-options="{ debounce: 300 }"  />
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <table id="list" class="table table-striped table-bordered table-hover">
+
+        <thead sort-header ng-model="ctrl.seatchParams.sort" on-sort="ctrl.reload()">
+        <th sortable-column title="Id" property="id"></th>
+        <th sortable-column title="Title" property="title"></th>
+        <th sortable-column title="ISBN" property="ISBN"></th>
+        <th sortable-column title="Price" property="price"></th>
+        <th sortable-column title="Release Date" property="releaseDate"></th>
+        </thead>
+        <tbody>
+        <tr class="animate-repeat" ng-repeat="item in ctrl.books">
+            <td><a ui-sref=".show({ id: item.id })">{{item.id}}</a></td>
+            <td>{{ item.title }}</td>
+            <td>{{ item.ISBN }}</td>
+            <td>{{ item.price }}</td>
+            <td>{{ item.releaseDate | date: 'MMM d, yyyy'}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <uib-pagination total-items="ctrl.books.totalCount" items-per-page="ctrl.seatchParams.pageSize" ng-model="ctrl.seatchParams.page" ng-change="ctrl.load()"></uib-pagination>
+
+    <section ui-view></section>
+</div>
